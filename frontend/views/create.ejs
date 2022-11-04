@@ -1,0 +1,11 @@
+<style>
+  @import url('/static/stylesheets/style.css');
+</style>
+
+<%- include('header') -%>
+
+<section class="create-container">
+  <h1 class="create-title"><%= title %></h1>
+  <h3 class="create-heading">Welcome to <%= category %></h3>
+  <p class="create-type"><%= JSON.stringify(data) %></p>
+</section>

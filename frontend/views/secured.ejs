@@ -1,0 +1,12 @@
+<style>
+  @import url('/static/stylesheets/style.css');
+</style>
+<script defer src="/assets/script.js"></script>
+
+<%- include('header') -%>
+
+<section class="secured-container">
+  <h1 class="secured-title"><%= title %></h1>
+  <h3 class="secured-heading">Welcome to Secured Page</h3>
+  <p class="secured-type"><%= JSON.stringify(data) %></p>
+</section>

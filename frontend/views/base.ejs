@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/static/stylesheets/style.css" />
+    <script defer src="/assets/script.js"></script>
+  </head>
+  <body>
+    <%- include('header') -%>
+    <main class="main-container">
+      <div class="main-title">
+        <div class="">
+          <% if(!isAuthenticated) { %>
+          <h3>You are logged out!</h3>
+          <% } else { %>
+          <h1 class="main-heading"><%= title %></h1>
+          <p class="login-welcome">Welcome <%= user.given_name %></p>
+          <h3>You are <span class="login-span">Logged in</span> ✔</h3>
+          <% } %>
+        </div>
+      </div>
+
+      <!-- user-info -->
+      <% if(user) { %>
+      <div class="profileInfo">
+        <img src="<%= user.picture %>" />
+        <p class="name">
+          <%= user.given_name.charAt(0).toUpperCase() + user.given_name.slice(1)
+          %>
+        </p>
+      </div>
+      <% } %>
+      <!-- <pre><%= JSON.stringify(user, null, 2)%></pre> -->
+    </main>
+  </body>
+</html>

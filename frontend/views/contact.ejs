@@ -1,0 +1,23 @@
+<style>
+  @import url('/static/stylesheets/style.css');
+</style>
+
+<%- include('header') -%>
+
+<section class="contact">
+  <h1 class="contact-title"><%= title %></h1>
+  <h3 class="contact-heading">Any Question...?</h3>
+  <div class="contact-container">
+    <div class="contact-box">
+      <div class="left"></div>
+      <div class="right">
+        <h2>Enter Your Info</h2>
+        <input type="text" class="field" placeholder="Your Name" />
+        <input type="email" class="field" placeholder="Your Email" />
+        <input type="text" class="field" placeholder="Your Phone" />
+        <textarea class="field area" placeholder="Message"></textarea>
+        <button class="btn">Send</button>
+      </div>
+    </div>
+  </div>
+</section>
