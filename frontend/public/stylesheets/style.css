@@ -267,6 +267,20 @@ h2:after {
   text-align: center;
 }
 
+.email-name {
+  font-size: 1.2rem;
+}
+.email-name > span {
+  color: #fefefe;
+}
+
+.verified-email {
+  font-size: 1.2rem;
+}
+.verified-email > span {
+  color: green;
+}
+
 /* media */
 
 @media only screen and (max-width: 1320px) {
